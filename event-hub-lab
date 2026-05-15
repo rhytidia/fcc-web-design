@@ -1,0 +1,46 @@
+<!-- Testing how to post html files here on GitHub with an activity about 
+creating an Event Hub page. Images are wrong for this but they're what I had easy acces to.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Event Hub</title>
+</head>
+<body>
+    <header>
+      <h1>Event Hub</h1>
+        <nav>
+          <ul>
+            <li><a href="#upcoming-events">Upcoming Events</a></li>
+            <li><a href="#past-events">Past Events</a></li>
+          </ul>
+        <nav>
+    </header>
+    <main>
+      <section id= "upcoming-events">
+        <h2>Upcoming Events</h2>
+        <article>
+            <h3>Sleeping on the couch!</h3>
+            <p>The cats will be sleeping on the couch most of the night, possibly with some occasional breaks to stretch their legs. Mostly they'll be hanging out nestled in the blankets, though.</p>
+        </article>
+        <article>
+            <h3>Waking you up!</h3>
+            <p>After a restful night of lounging on the couch, the cats will, sometimes gingerly, sometimes forcefully, jump on the bed to wake you up. They are bored and it's time for some socializing!</p>
+        </article>
+      </section>
+      <section id= "past-events">
+        <h2>Past Events</h2>
+        <article>
+            <h3>Having some dinner</h3>
+            <img src="https://cdn.freecodecamp.org/curriculum/labs/past-event1.jpg" alt="an old IBM computer">
+            <p>The little cuties had some lovely dinner around 6pm, each with their own bowls. They had to eat in separate rooms so they don't each each others' food.</p>
+        </article>
+        <article>
+            <h3>Wandering Around</h3>
+            <p>The kitties spent part of the day wandering around, looking out of windows, sitting in windowsills, barfing on the carpet. The usual stuff.</p>
+            <img src="https://cdn.freecodecamp.org/curriculum/labs/past-event2.jpg" alt="Abstract digital art with several cubes">
+        </article>
+      </section>
+    </main>
+</body>
