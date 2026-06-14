@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Animal Rescue Volunteer Application Form</h1>
+        <form>
+            <label for="name">Full Name: </label>
+            <input type="text" id="name" placeholder="First and last name">
+            <label for="email">Email address: </label>
+            <input type="email" id="email" placeholder="example@example.org">
+            <label for="position">Position applying for</label>
+            <select id="position">
+                <option value="">Choose a position</option>
+                <option value="walker">Dog walker</option>
+                <option value="desk">Front desk</option>
+                <option value="socialization">Rescue animal socialization</option>
+                <option value="foster-interviews">Foster interviewer</option>
+                <option value="events">Events support</option>
+                <option value="comms">Communications support</option>
+            </select>
+            <fieldset class="radio-group">
+                <legend>Availability: </legend>
+              
+                <input type="radio" name="availability" id="2-5">
+                <label for="2-5">2-5 hours/week</label>
+              
+                <input type="radio" name="availability" id="6-10">
+                <label for="6-10">6-10 hours/week</label>
+                
+                <input type="radio" name="availability" id="11-20">
+                <label for="11-20">11-20 hours/week</label>
+
+                
+                <input type="radio" name="availability" id="other">
+                <label for="other">Other</label>
+                
+                <label for="other-avail" id="other-avail-label">If you chose "other", or if you want to share further information about your availability, please explain here:</label>
+                <textarea rows="3" cols="50" id="other-avail"></textarea>
+            </fieldset>
+            <fieldset class="interest-experience">
+                <legend>Interest and Experience: </legend>
+                <label for="interest">Please explain your interest in volunteering with us, and in the particular role you have chosen.</label>
+                <textarea rows="6" cols="50" id="interest"></textarea>
+                 <label for="experience">Please explain any previous experience you have that is relevant to the role you're, whether through volunteering, a job, or any other experience that links to this role.</label>
+                <textarea rows="6" cols="50" id="experience"></textarea>
+            </fieldset>
+            <fieldset class="other-info">
+                <legend>Other information</legend>
+                <label for="message">Is there anything else you would like to share with us? (optional)</label>
+                <textarea rows="4" cols="50" id="message"></textarea>
+            </fieldset>
+            <button type="submit">Submit form</button>
+        </form>
+    </div>
+</body>
