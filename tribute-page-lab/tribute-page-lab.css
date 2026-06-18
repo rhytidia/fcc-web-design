@@ -1,0 +1,57 @@
+* {
+	box-sizing: border-box;
+}
+
+main {
+	background-color: #e5f7fa;
+}
+#img-div {
+	background-color: #fff;
+	width: 90%;
+	max-width: 600px;
+	margin: auto;
+}
+
+#img-caption {
+	padding: 0 20px 10px 20px;
+	width: 100%;
+	max-width: 600px;
+}
+
+#image {
+	height: auto;
+	width: 100%;
+	max-width: 100%;
+	padding: 20px 20px 10px 20px;
+}
+
+h1,
+h2 {
+	text-align: center;
+}
+
+h1,
+h2 {
+	padding-top: 20px;
+}
+
+li::marker {
+	content: "🐦‍⬛";
+}
+
+li {
+	padding-left: 8px;
+	margin-bottom: 20px;
+}
+
+a:link {
+	color: blue;
+}
+
+a:visited {
+	color: indigo;
+}
+
+a:hover {
+	color: #a50ca5;
+}
