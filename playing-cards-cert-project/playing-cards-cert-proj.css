@@ -1,0 +1,90 @@
+#playing-cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	background-color: #d0dbe5;
+}
+
+.card {
+	display: flex;
+	justify-content: space-between;
+	width: 250px;
+	height: 350px;
+	background-color: #faf9f9;
+	border: 1px solid darkgrey;
+	border-radius: 15px;
+	box-shadow: 2px 2px 5px 2px darkgrey;
+}
+
+.left {
+	display: flex;
+	flex-direction: column;
+	align-self: flex-start;
+	padding: 0 15px;
+}
+
+.middle {
+	display: flex;
+	flex-direction: column;
+	max-height: 70%;
+	justify-content: center;
+	align-self: center;
+}
+
+.row {
+	display: flex;
+	justify-content: center;
+	gap: 25px;
+}
+
+.right {
+	display: flex;
+	flex-direction: column-reverse;
+	align-self: flex-end;
+	padding: 0 15px;
+}
+
+.top-bottom-char {
+	font-size: 1.8rem;
+	font-weight: bold;
+	font-family: Tahoma;
+	margin-top: 10px;
+	margin-bottom: 0;
+	padding: 0 2px;
+}
+
+.right {
+	font-size: 1.8rem;
+	font-weight: bold;
+	font-family: Tahoma;
+	margin-top: 0;
+	margin-bottom: 10px;
+	transform: rotate(180deg);
+}
+
+.red {
+	color: red;
+}
+
+.down {
+	transform: rotate(180deg);
+}
+.large-icon {
+	font-size: 7rem;
+}
+
+.medium-icon {
+	font-size: 5rem;
+}
+
+.medium-small-icon {
+	font-size: 4.5rem;
+	line-height: 70px;
+}
+
+.small-icon {
+	margin: 0;
+	padding: 0 2px;
+	font-size: 2rem;
+}
