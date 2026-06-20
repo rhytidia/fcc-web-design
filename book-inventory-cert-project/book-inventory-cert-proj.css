@@ -1,0 +1,92 @@
+html {
+	box-sizing: border-box;
+}
+table {
+	border-collapse: collapse;
+	font-family: Helvetica, sans-serif;
+	width: 95%;
+	margin: 0 auto;
+}
+
+span {
+	display: inline-block;
+}
+
+tr td,
+tr th {
+	padding: 10px;
+}
+
+tr {
+	border: 0.5px solid lightgrey;
+}
+
+tr[class="col-headers"] {
+	background: linear-gradient(#edeff1, #9eafc0);
+	border-bottom: 2px solid slategrey;
+}
+
+tr[class="read"] {
+	background: linear-gradient(#e1fcee, #7ed2a6);
+}
+
+tr[class="to-read"] {
+	background: linear-gradient(#e1f9fc, #6cbec6);
+}
+
+tr[class="in-progress"] {
+	background: linear-gradient(#fde2d1, #f79557);
+}
+
+tr[class="to-read"] span[class="status"] {
+	border: 0.5px solid #565454;
+	border-radius: 10px;
+	background: linear-gradient(#6cbec6, #016169 60%);
+	color: #fff;
+}
+
+tr[class="in-progress"] span[class="status"] {
+	border: 0.5px solid #565454;
+	border-radius: 10px;
+	background: linear-gradient(#e68256, #a43c0e 60%);
+	color: #fff;
+}
+
+tr[class="read"] span[class="status"] {
+	border: 0.5px solid #565454;
+	border-radius: 10px;
+	background: linear-gradient(#52af7f, #1c7045 60%);
+	color: #fff;
+}
+
+span[class="status"],
+span[class^="rate"] {
+	height: 16px;
+	width: 90px;
+	padding: 8px;
+	text-align: center;
+}
+
+span[class^="rate"] > span {
+	background: radial-gradient(#ebebea, snow 60%);
+	width: 15px;
+	height: 15px;
+	border: 1.5px solid slategrey;
+	border-radius: 50%;
+	margin: 2px;
+}
+
+span[class~="one"] span:first-child {
+	border: 1.5px solid slategrey;
+	background: linear-gradient(whitesmoke, #11566b);
+}
+
+span[class~="two"] span:nth-child(-n + 2) {
+	border: 1.5px solid slategrey;
+	background: linear-gradient(whitesmoke, #11566b);
+}
+
+span[class~="three"] span {
+	border: 1.5px solid slategrey;
+	background: linear-gradient(whitesmoke, #11566b);
+}
