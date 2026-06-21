@@ -1,6 +1,11 @@
 html {
 	box-sizing: border-box;
 }
+
+h1 {
+	text-align: center;
+}
+
 table {
 	border-collapse: collapse;
 	font-family: Helvetica, sans-serif;
@@ -31,31 +36,31 @@ tr[class="read"] {
 }
 
 tr[class="to-read"] {
-	background: linear-gradient(#e1f9fc, #6cbec6);
+	background: linear-gradient(#e9fafc, #6cbec6);
 }
 
 tr[class="in-progress"] {
-	background: linear-gradient(#fde2d1, #f79557);
+	background: linear-gradient(#fcece3, #f79557);
 }
 
 tr[class="to-read"] span[class="status"] {
 	border: 0.5px solid #565454;
 	border-radius: 10px;
-	background: linear-gradient(#6cbec6, #016169 60%);
+	background: linear-gradient(#7ac0cc, #015969 60%);
 	color: #fff;
 }
 
 tr[class="in-progress"] span[class="status"] {
 	border: 0.5px solid #565454;
 	border-radius: 10px;
-	background: linear-gradient(#e68256, #a43c0e 60%);
+	background: linear-gradient(#d58562, #98370c 60%);
 	color: #fff;
 }
 
 tr[class="read"] span[class="status"] {
 	border: 0.5px solid #565454;
 	border-radius: 10px;
-	background: linear-gradient(#52af7f, #1c7045 60%);
+	background: linear-gradient(#64c593, #117040 60%);
 	color: #fff;
 }
 
@@ -78,15 +83,15 @@ span[class^="rate"] > span {
 
 span[class~="one"] span:first-child {
 	border: 1.5px solid slategrey;
-	background: linear-gradient(whitesmoke, #11566b);
+	background: linear-gradient(#e8e8e8, #11566b);
 }
 
 span[class~="two"] span:nth-child(-n + 2) {
 	border: 1.5px solid slategrey;
-	background: linear-gradient(whitesmoke, #11566b);
+	background: linear-gradient(#e8e8e8, #11566b);
 }
 
 span[class~="three"] span {
 	border: 1.5px solid slategrey;
-	background: linear-gradient(whitesmoke, #11566b);
+	background: linear-gradient(#e8e8e8, #11566b);
 }
