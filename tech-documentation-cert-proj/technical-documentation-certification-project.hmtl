@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Technical Documentation Page</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+
+	<body>
+		<nav id="navbar">
+			<header>
+				<h1>Coding Log</h1>
+			</header>
+			<a class="nav-link" href="#Introduction">Introduction</a>
+			<a class="nav-link" href="#Installation">Installation</a>
+			<a class="nav-link" href="#Creating_logs">Creating logs</a>
+			<a class="nav-link" href="#Adapting_the_program">Adapting the program</a>
+			<a class="nav-link" href="#Future_functionality">Future functionality</a>
+		</nav>
+		<main id="main-doc">
+			<section class="main-section" id="Introduction">
+				<header>
+					<h2>Introduction</h2>
+				</header>
+				<p>
+					This program can be used to create a log for coding activities done
+					daily or any other cadence you choose. The program asks the user a set
+					of questions about what they've done related to coding, what questions
+					or issues have come up, and next steps. It then writes the questions
+					and answers to a markdown file in a location of the user's choosing.
+				</p>
+
+				<h3>Purpose</h3>
+				<p>
+					I created this program as a project while learning backend development
+					with boot.dev. Mostly I did it for the sake of learning how to create
+					a first project (ever!) but also wanted something that I would use
+					myself.
+				</p>
+				<p>
+					The purpose of this program is to make it easy to keep quick logs of
+					coding activity so that one can keep track of progress. This is
+					particularly useful when working on projects, to kepe track of
+					questions/issues and answers, and next steps to work on.
+				</p>
+
+				<h3>Functionality</h3>
+				<p>
+					This coding log program runs in the command line interface (CLI), or
+					terminal. In future, I plan to create a graphical user interface (GUI)
+					to make the log entry inputs look and feel a bit cleaner than they do
+					in the terminal interface.
+				</p>
+				<p>
+					It provides a set of questions to the user, and then writes the
+					questions and answers to a markdown file at the file path of the
+					user's choosing. More specifically, the program:
+				</p>
+				<ul>
+					<li>
+						Creates a markdown file with the current month if none exists
+						already, giving it the title "YYYY-mm", and putting into a filepath
+						the user enters.
+					</li>
+					<ul>
+						<li>
+							If a file for the current month exists already, it writes to that
+							existing file.
+						</li>
+					</ul>
+					<li>
+						The programs writes the questions and the user-supplied answers
+						under a header with the current date on that file.
+						<ul>
+							<li>
+								If a hearder with the current date already exists, it writes a
+								new section under a subheader with "Updated at" and the current
+								time of writing in the user's timezone.
+							</li>
+						</ul>
+					</li>
+
+					<li>
+						The user is able to skip questions or exit the entire program early
+						(instructions are provided in the program on how to do these
+						things), in which case only the questions with answers supplied
+						before the program completes will be written to the markdown file.
+					</li>
+				</ul>
+			</section>
+
+			<section class="main-section" id="Installation">
+				<header>
+					<h2>Installation</h2>
+				</header>
+				<p>
+					This program runs entirely in python and has no other dependencies.
+					For future development I will likely use
+					<span class="inline-code">tkinter</span> for the GUI, but that is part
+					of the python package and doesn't require separate installation.
+				</p>
+				<p>To install and set up:</p>
+				<ol>
+					<li>
+						Ensure you have python3 installed, with version 3.14 or higher
+					</li>
+					<li>Clone the program repository</li>
+					<li>
+						Run the <span class="inline-code">main.py</span> file to start the
+						program; you can do this in the terminal or in an IDE that has an
+						integrated terminal
+					</li>
+				</ol>
+				<p>
+					You can run the program (in the terminal or IDE, as discussed above)
+					with the following command from within the directory where the program
+					is located:
+				</p>
+				<code>python3 main.py</code>
+				<p>
+					If you use <span class="inline-code">uv</span> to manage your
+					projects, you can use:
+				</p>
+				<code>uv run main.py</code><br />
+			</section>
+
+			<section class="main-section" id="Creating_logs">
+				<header>
+					<h2>Creating logs</h2>
+				</header>
+				<p>When you run the program, the following things will happen:</p>
+				<p>
+					<b>First</b>: You will need to enter a filepath for where the
+					questions and answers will be saved. If this is not a valid filepath
+					(or you don't enter anything) you will have two more chances to enter
+					a valid filepath. Otherwise, the program will end.
+				</p>
+
+				<p>
+					For example, you could enter the following to save the file in a
+					Documents folder on a Mac:
+				</p>
+				<code>/Users/username/Documents/coding/logs</code>
+
+				<p>
+					<b>Second</b>: Once you enter a valid file path, a confirmation will
+					be provided that the file will be saved to that path. A markdown file
+					with the current month will be opened at that path. Then, basic
+					instructions will appear for making the log (including how to skip
+					questions or end early).
+				</p>
+
+				<p>
+					<b>Third</b>: Questions will appear one at a time, and once the user
+					answers each question the next will appear. As noted above, users can
+					skip questions or end the whole program early if they choose, and if
+					so, only the questions for which answers have been provided, along
+					with the answers themselves, will be written to the markdown file.
+				</p>
+
+				<p>
+					<b>Fourth</b>: If the user answers one or more questions, they are
+					written to the markdown file already opened at the path defined by the
+					user, and a confirmation message to that effect is provided, with the
+					full path to the file so the user can review where the file is
+					located. For example:
+				</p>
+
+				<code
+					>Your answers have been saved in a markdown file at
+					/Users/username/Documents/coding/logs/2026-06.md</code
+				>
+
+				<p>
+					<b>Note</b>: If the user ends the program early, no confirmation
+					message appears, but the answers already supplied, if any, are written
+					to the markdown file.
+				</p>
+				<p></p>
+			</section>
+
+			<section class="main-section" id="Adapting_the_program">
+				<header>
+					<h2>Adapting the program</h2>
+				</header>
+				<p>
+					The program has an <span class="inline-code">inputs.py</span> file
+					that holds a list of questions as well as messages printed to the
+					console. These can easily be changed as desired and the changes will
+					propagate to <span class="inline-code">main.py</span>.
+				</p>
+
+				<p>
+					For example, here are sample questions in the
+					<span class="inline-code">inputs.py</span> file, that can be adapted
+					if desired:
+				</p>
+				<code>
+					q1 = "What are you working on?"<br />
+					q2 = "What have you completed or accomplished?"<br />
+					q3 = "Any questions or challenges coming up?"<br />
+					q4 = "What are your next steps?"<br />
+				</code>
+				<p>
+					You could adapt this program for any note-taking purpose, not just a
+					coding log, by changing the questions asked.
+				</p>
+				<p>
+					It could be possible also to provide different sets of questions for
+					different purposes, and have the user provide an input saying which
+					type of log they're writing, and the program would use that to choose
+					the correspondign list of questions. This functionality is not
+					provided in the current program, but is one way it could be adapted.
+				</p>
+			</section>
+
+			<section class="main-section" id="Future_functionality">
+				<header>
+					<h2>Future functionality</h2>
+				</header>
+				<p>
+					As noted above, I plan to use
+					<span class="inline-code">tkinter</span> to generate a graphical user
+					interface for asking and answering questions, largely to learn how to
+					use that functionality. The program would still run in the terminal
+					interface to begin (you'd need to start it there) but then it would
+					open a GUI window for the questions and answers. Getting this to work
+					may take some time, as I am starting with zero knowledge of how to do
+					it.
+				</p>
+				<p>
+					A stretch goal is to be able to tie the logs generated through this
+					program to a static website, so that if the user chooses, the markdown
+					file could be translated to html to be added to a static website. I
+					have already developed a static website generator in python through a
+					tutorial on boot.dev that takes markdown inputs and translates them to
+					html, and at some point it would be interesting to be able to connect
+					this kind of program to that kind of one. This may be far into the
+					future though!
+				</p>
+			</section>
+		</main>
+	</body>
+</html>
